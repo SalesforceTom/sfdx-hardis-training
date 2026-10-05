@@ -5,6 +5,7 @@ a day, newest first, and a change goes under the date of the day it is made.
 
 ## 2026-10-05
 
+- Lab 3.8: the first monitoring run is green even with findings, and the lab says where to read them.
 - A badge claim is answered once: the audit no longer posts the same comment twice on the issue.
 - Lab 1.1: the Git installer options are named as the installer shows them, each installer is named where the lab talks about it, and the pill of the Extensions icon sits on that icon.
 - Lab 1.2: a note says what a connected org and the default org are, and the Agentforce Vibes tip opens the GitHub CLI step instead of closing it.

@@ -182,8 +182,10 @@ Be honest about what you are looking at. `helios-prod` is a Developer Edition or
 old, with one user in it and an app you deployed yourself. Nothing seeds it with the findings a
 two-year-old org has, and a report that comes back nearly clean is not a broken report.
 
-Nearly clean, not clean: the first run is red. The **Monitoring** job fails on **Detect if org
-limits are close to be reached**, with one limit at 100%: `ActiveScratchOrgs`, 3 of 3. `helios-prod`
+Nearly clean, not clean. The run itself is green, and that says nothing about the org: a monitoring
+job that ran to its end stays green even when it found issues, and turns red only when the job
+itself could not run. The findings are in the report. **Detect if org limits are close to be reached** has
+one limit at 100%: `ActiveScratchOrgs`, 3 of 3. `helios-prod`
 is also your Dev Hub, and your three training scratch orgs use every slot it has. That is a true
 finding, the kind a limit check exists for: on a real Dev Hub it means nobody on the team can create
 a scratch org until one expires.
@@ -306,7 +308,8 @@ Command documentation: [hardis:org:configure:monitoring](https://sfdx-hardis.clo
 ## What you should see
 
 - A second repository, created by you, with an **Org Monitoring sfdx-hardis** workflow run: the
-  backup, the Apex tests and MegaLinter green, and the Monitoring job red on `ActiveScratchOrgs`
+  backup, the Apex tests, MegaLinter and the Monitoring job all green
+- The `ActiveScratchOrgs` limit at 100% in the report, which the green run did not tell you
 - A full source backup of `helios-prod` committed in it
 - A first report you have read and triaged, however short it is
 - One notification channel configured
